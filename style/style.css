@@ -1,0 +1,400 @@
+/* Menggunakan Montserrat sebagai font default untuk semua elemen */
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Mengatur gaya tautan */
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+
+/* Mengatur tinggi minimum body */
+body {
+  min-height: 2000px;
+}
+
+/* Mengatur warna latar belakang navbar */
+.navbar {
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Menempatkan navbar di atas konten */
+}
+
+/* Mengatur ikon toggle navbar */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Mengatur warna tautan navbar */
+.navbar a {
+  color: #000000;
+}
+
+/* Custom CSS for changing animation color */
+.navbar-nav .nav-link.active::after {
+    background-color: #007bff;
+}
+
+/* Mengatur gaya jumbotron */
+.jumbotron {
+  padding-top: 2rem;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+/* Mengatur lebar gambar dalam jumbotron */
+.jumbotron img {
+  width: 200px;
+}
+
+/* Mengatur latar belakang dan padding untuk bagian projects */
+#projects {
+  background-color: #FFFFFF;
+  padding: 12px;
+}
+
+.card {
+  border: none;
+  box-shadow: 5px 5
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.service-detail-item {
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-detail-item:hover {
+  transform: scale(1.010);
+  -webkit-transform: scale(1.010);
+  -moz-transform: scale(1.010);
+  -ms-transform: scale(1.010);
+  -o-transform: scale(1.010);
+}
+
+.service-detail-item:hover  {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+.service-detail-item  {
+  width: 100%;
+  filter: grayscale(1);
+}
+
+/* Mengatur tinggi gambar pada card */
+.service-detail-item {
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Mengatur tata letak untuk service-top */
+.service-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Mengatur tata letak untuk service-bottom */
+.service-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Mengatur ukuran teks untuk judul */
+.service-item h2 {
+  font-size: 40px;
+}
+
+#contact h1 {
+  position: relative;
+}
+
+#contact > h1::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  background: url("./images/accent2.svg");
+  left: -20px;
+  top: -10px;
+  z-index: -1;
+}
+
+.contact-detail {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 72px;
+  column-gap: 128px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #007be9;
+  padding: 40px 32px 40px 32px;
+
+}
+
+form h1 {
+  font-size: 32px;
+  text-align: center;
+}
+
+form button {
+  border: none;
+}
+
+form button:hover {
+  cursor: pointer;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 32px;
+  margin-top: 32px;
+  grid-template-areas:    "name subject"
+                          "email phone"
+                          "message message";
+}
+
+#input-name {
+  grid-area: name;
+}
+
+#input-subject {
+  grid-area: subject;
+}
+
+#input-email {
+  grid-area: email;
+}
+
+#input-phone {
+  grid-area: phone;
+}
+
+#input-message {
+  grid-area: message;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.input-group label {
+  font-weight: 700;
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+}
+
+.input-group input:focus {
+  border-bottom: 2px solid #6c757d;
+}
+
+footer {
+  padding: 16px 128px;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+footer p {
+  color: white;
+}
+
+.social-icons {
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+p {
+  margin: 0;
+}
+
+.social-icons img {
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+@media only screen and (max-width: 992px) {
+  #header, #footer {
+      padding: 16px 32px;
+  }
+
+  section {
+      padding: 64px 32px;
+  }
+
+  #landing {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
+
+  #landing > div {
+      width: 100%;
+  }
+
+  #about {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+  }
+
+  #about > div {
+      width: 100%;
+  }
+
+  .service-detail {
+      gap: 16px;
+  }
+
+  .contact-detail {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 64px;
+  }
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .service-detail {
+      grid-template-columns: 1fr;
+  }
+
+  .service-detail-item {
+      height: 200px;
+  }
+
+  .service-item h2 {
+      font-size: 32px;
+  }
+
+  .service-item p {
+      font-size: 16px;
+  }
+
+  .service-bottom {
+      grid-template-columns: 1fr;
+  }
+
+  footer {
+      flex-direction: column;
+      padding: 16px;
+  }
+
+  footer p {
+      width: 100%;
+      text-align: center;
+  }
+
+  .social-icon {
+      justify-content: center;
+  }
+}
+
+/* Form Styles */
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact{
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10 20 20 20px;
+  border-radius: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 150px;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+      padding: 10px;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+      width: 100%;
+  }
+}
